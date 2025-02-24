@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CARD3D</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      position: relative;
+    }
+    /* Header Bar */
+    header {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin: 0;
+    }
+    /* Dropdown Menu in top right */
+    .dropdown {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a,
+    .dropdown-content span {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown-content .disabled {
+      pointer-events: none;
+      opacity: 0.6;
+      cursor: default;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropbtn {
+      background-color: #555;
+    }
+    /* Main Content */
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+    }
+    .logo {
+      max-width: 60vw;
+      max-height: 60vh;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .logo img {
+      width: auto;
+      height: auto;
+      max-width: 60vw;
+      max-height: 60vh;
+      display: block;
+    }
+    .description {
+      font-size: 1.2em;
+      color: #333;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with "CARD3D" -->
+  <header>
+    <h1>CARD3D</h1>
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <span class="disabled">Home</span>
+        <a href="ornaments.html">Ornaments</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="logo">
+      <!-- Replace 'logo.png' with your actual logo file -->
+      <img src="logo.png" alt="CARD3D Logo">
+    </div>
+    <div class="description">
+      <p>CARD3D is a STE(A)M-inspired consumer products company. Our flagship product, CARD3D, is a customized greeting card ornament that brings innovation and artistry to your celebrations.</p>
+    </div>
+  </div>
+</body>
+</html>

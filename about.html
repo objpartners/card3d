@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CARD3D - About</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+    /* Header: title on left, dropdown menu on right */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+    .page-header h1 {
+      font-size: 2em;
+      color: #000;
+    }
+    /* Dropdown Menu in header */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a,
+    .dropdown-content span {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown-content .disabled {
+      pointer-events: none;
+      opacity: 0.6;
+      cursor: default;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropbtn {
+      background-color: #555;
+    }
+    /* Main content container splits page into two halves */
+    .container {
+      display: flex;
+      flex-direction: row;
+      min-height: 80vh;
+      padding: 20px;
+    }
+    .left, .right {
+      flex: 1;
+      padding: 20px;
+    }
+    /* Left column text styling */
+    .description {
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+    /* Introductory text: larger than the rest */
+    .intro {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    /* Right column: image styling */
+    .right img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with title and dropdown menu on right -->
+  <div class="page-header">
+    <h1>About ME</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="ornaments.html">Ornaments</a>
+        <span class="disabled">About</span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main content container -->
+  <div class="container">
+    <!-- Left column: text -->
+    <div class="left">
+      <div class="description">
+        <p class="intro">
+          Meet Otis B. Jennings, PhD <br> Chief Art-Scientist<br>
+        </p>
+        <p>
+          After years as a professor and then in corporate settings, my true passions became clear to me. I enjoy brainteasers, artistic expression, entrepreneurship, sharing knowledge, helping others, and completing projects with smart and talented friends. But these challenges usually had to wait until the workday was done.<br><br>
+        </p>
+        <p>
+          CARD3D LLC is the vehicle that lets me accomplish all of these passions at once.<br> <br>
+        </p>
+        <p>
+          CARD3D Ornaments occurred to me years ago. And I made a few for friends. Recently, I decided to share this gifting opportunity to the world, as a way to energize the greeting card given process. There are more products on my vision board. Stay tuned...
+        </p>
+      </div>
+    </div>
+    
+    <!-- Right column: image -->
+    <div class="right">
+      <img src="otisArt.jpg" alt="Otis B Jennings Artwork">
+    </div>
+  </div>
+</body>
+</html>

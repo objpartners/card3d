@@ -16,8 +16,9 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #fff;
+      color: #000;
     }
-    /* Header: contains the page title and dropdown menu on the same line */
+    /* Header: page title on left, dropdown menu on right */
     .page-header {
       display: flex;
       justify-content: space-between;
@@ -48,7 +49,7 @@
       right: 0;
       background-color: #f9f9f9;
       min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       z-index: 1;
     }
     .dropdown-content a,
@@ -57,6 +58,7 @@
       padding: 12px 16px;
       text-decoration: none;
       display: block;
+      text-align: left;
     }
     .dropdown-content a:hover {
       background-color: #ddd;
@@ -72,54 +74,42 @@
     .dropdown:hover .dropbtn {
       background-color: #555;
     }
-    /* Main container splits the content into left and right halves */
+    /* Main container with fixed height */
     .container {
       display: flex;
-      min-height: 80vh;
+      height: 80vh;
+      padding: 20px;
     }
     .left, .right {
       flex: 1;
       padding: 20px;
     }
-    /* Left column: white background with description text */
-    .left {
-      background-color: #fff;
-      color: #000;
-    }
+    /* Left column: description text */
     .left .description {
       font-size: 1.2em;
       line-height: 1.5;
-      color: #000;
     }
-    /* Vertical divider */
-    .divider {
-      width: 1px;
-      background-color: #ddd;
-      height: 80vh;
-      align-self: center;
-      margin: 0 20px;
-    }
-    /* Right column: black background, centered 3D models */
+    /* Right column: black background, flex container for model viewers */
     .right {
       background-color: #000;
-      color: #fff;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       padding: 20px;
+      align-items: center;
     }
-    /* Model-viewer: remove background and outline */
+    /* Model viewers fill available vertical space and are centered */
     model-viewer {
-      width: 100%;
-      height: 200px;
+      flex: 1;
       border: none;
       background: none;
-    }
-    .right > model-viewer:not(:last-child) {
-      margin-bottom: 20px;
+      align-self: center;
+      max-width: 100%;
     }
   </style>
 </head>
 <body>
-  <!-- Page header: title and dropdown menu -->
+  <!-- Header with page title and dropdown menu -->
   <div class="page-header">
     <h1>Ornaments</h1>
     <div class="dropdown">
@@ -133,9 +123,9 @@
     </div>
   </div>
   
-  <!-- Main content container -->
+  <!-- Main Content Container -->
   <div class="container">
-    <!-- Left column: description text -->
+    <!-- Left Column: Description Text and Additional Links -->
     <div class="left">
       <div class="description">
         <p>
@@ -144,15 +134,21 @@
           The shapes differ by geometry. Some are simple to assemble. Others require a little work, that's hopefully enjoyable.
           For the latter, we provide an animated guide for construction.
         </p>
+        <br><br>
+        <p>
+          To design and order your own ornaments, go to our 
+          <a href="https://f8c2ba.myshopify.com" target="_blank">Shopify page</a>.
+        </p>
+        <br><br>
+        <p>
+          To see an example of the animation, <a href="https://cardl3d3.web.app/foldsequence.html" target="_blank">go here</a>.
+        </p>
       </div>
     </div>
-    <!-- Vertical divider -->
-    <div class="divider"></div>
-    <!-- Right column: 3D models on a black background -->
+    <!-- Right Column: 3D Models -->
     <div class="right">
       <model-viewer src="one.glb" alt="3D Object One" auto-rotate camera-controls></model-viewer>
       <model-viewer src="two.glb" alt="3D Object Two" auto-rotate camera-controls></model-viewer>
-      <model-viewer src="three.glb" alt="3D Object Three" auto-rotate camera-controls></model-viewer>
     </div>
   </div>
 </body>
